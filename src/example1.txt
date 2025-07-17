@@ -1,0 +1,57 @@
+//here beam is example
+
+import Navbar from './components/Navbar';
+import AboutUs from './components/AboutUs';
+import Events from './components/Events';
+import Projects from './components/Projects';
+import Resources from './components/Resources';
+import Beams from "./background/Beams";
+import './App.css';
+
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      {/* Beams as universal background */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <Beams
+          beamWidth={1.6}
+          beamHeight={30}
+          beamNumber={33}
+          lightColor="#6effc4"
+          speed={8.4}
+          noiseIntensity={1.55}
+          scale={0.29}
+          rotation={27}
+        />
+      </div>
+
+      <main className="bg-[#0b0b0c]/80 min-h-screen text-[#d0d0d0] relative z-10">
+        {/* Landing Page Section */}
+        <section className="flex flex-col items-center justify-center h-[100vh]">
+          <h1
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 700
+            }}
+            className="text-7xl text-[#6EFFC4] mb-6 z-10 font-heading"
+          >
+            The Web Dev Club
+          </h1>
+          {/* <p className="text-white drop-shadow-[0_0_6px_white] text-xl max-w-xl z-10 text-center">
+            Welcome to the official website...
+          </p> */}
+        </section>
+        <section>
+          <AboutUs className="h-[100vh]" />
+          {/* <Events /> */}
+          <Projects />
+          <Resources />
+        </section>
+      </main>
+    </>
+  );
+}
+
+export default App;

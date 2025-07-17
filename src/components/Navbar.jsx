@@ -12,18 +12,18 @@ const navLinks = [
 export default function Navbar() {
   const [expanded, setExpanded] = useState(false);
 
-  // Optional: Smooth scroll to top for Home
+  // Optional: Smooth scroll to top when Home is clicked
   const handleHomeClick = (e) => {
-    if (e.target.getAttribute('href') === '#home') {
+    if (e.target.getAttribute("href") === "#home") {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setExpanded(false);
     }
   };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex flex-col items-center pointer-events-none">
-      {/* Animated pill with club name */}
+      {/* Pill with club name */}
       <div
         className={`transition-all duration-[700ms] ease-in-out pointer-events-auto select-none shadow-lg border-b border-white/20 mt-4 rounded-2xl flex items-center justify-center
           ${expanded
@@ -44,7 +44,8 @@ export default function Navbar() {
           The Web Dev Club
         </span>
       </div>
-      {/* Expanded navbar with only links, appears to grow from the pill */}
+
+      {/* Expanded navbar: links row on md+, wraps on mobile */}
       <div
         className={`absolute left-1/2 -translate-x-1/2 transition-all duration-[700ms] ease-in-out pointer-events-auto
           ${expanded
@@ -54,19 +55,35 @@ export default function Navbar() {
         style={{
           top: "68px",
           width: "100%",
-          maxWidth: "700px",
+          maxWidth: "900px", // Adjust for your layout
+          paddingLeft: "8px",
+          paddingRight: "8px",
+          transition: "height 0.4s cubic-bezier(0.4,0.2,0.2,1), opacity 0.7s, transform 0.7s",
         }}
         onMouseEnter={() => setExpanded(true)}
         onMouseLeave={() => setExpanded(false)}
       >
-        <nav className="bg-[#18181b] border-b border-white/20 shadow-lg rounded-2xl flex items-center justify-center px-8 py-4">
-          <div className="flex flex-1 justify-center space-x-10">
+        <nav className="bg-[#18181b] border-b border-white/20 shadow-lg rounded-2xl flex items-center justify-center px-2 py-4 md:px-8">
+          <div
+            className="
+              flex flex-1 justify-center flex-wrap
+              gap-x-4 gap-y-2
+              md:flex-nowrap md:gap-x-10 md:gap-y-0
+              max-w-full
+            "
+          >
             {navLinks.map((link, i) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={handleHomeClick}
-                className="text-lg font-semibold text-white/90 hover:text-[#6EFFC4] transition-colors duration-200 px-3 py-1 rounded-lg hover:bg-white/10 nav-link-creative"
+                className="
+                  text-base md:text-lg font-semibold
+                  text-white transition-colors duration-200
+                  px-2 md:px-3 py-1
+                  rounded-lg
+                  nav-neon-text
+                "
                 style={{
                   transitionDelay: expanded ? `${i * 60}ms` : "0ms",
                 }}
@@ -77,20 +94,29 @@ export default function Navbar() {
           </div>
         </nav>
       </div>
-      {/* Spacer to prevent content from hiding behind navbar */}
+
+      {/* Spacer to avoid content hidden behind navbar */}
       <div className="h-20 md:h-16" />
-      {/* Custom creative animation styles */}
+
+      {/* Custom neon glow text style */}
       <style>{`
-        .nav-link-creative .nav-link-inner {
-          transition: transform 0.3s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.3s, color 0.2s;
-          display: inline-block;
+        .nav-neon-text .nav-link-inner {
+          transition:
+            color 0.2s cubic-bezier(0.4,0.2,0.2,1),
+            text-shadow 0.3s cubic-bezier(0.4,0.2,0.2,1);
+          color: #fff;
+          text-shadow: none;
         }
-        .nav-link-creative:hover .nav-link-inner {
-          transform: scale(1.12);
-          box-shadow: 0 2px 16px 0 #6EFFC4aa;
+        .nav-neon-text:hover .nav-link-inner,
+        .nav-neon-text:focus .nav-link-inner {
           color: #6EFFC4;
+          text-shadow:
+            0 0 6px #6EFFC4,
+            0 0 14px #6EFFC4,
+            0 0 24px #6EFFC466,
+            0 0 34px #33ffc1aa;
         }
       `}</style>
     </header>
   );
-} 
+}

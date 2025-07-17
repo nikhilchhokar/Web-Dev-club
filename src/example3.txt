@@ -71,7 +71,7 @@ function App() {
         </section>
         <section>
           <AboutUs className="h-[100vh]" />
-          <Events />
+          {/* <Events /> */}
           <Projects />
           <Resources />
         </section>
