@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../lib/utils";
-
+import ScrollFloat from "./scrollFloat/ScrollFloat";
 // Example team data
 const teamMembers = [
   {
@@ -41,7 +41,14 @@ export default function Team() {
 
   return (
     <section className="my-8">
-      <h3 className="text-2xl font-semibold text-[#6EFFC4] mb-2">Our Team</h3>
+      <ScrollFloat
+  animationDuration={3}
+  ease='back.inOut(4)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=50%'
+  stagger={0.3}
+  className="text-3xl font-bold text-[#6EFFC4] mb-4"
+> Our Team</ScrollFloat>
       <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6")}>
         {teamMembers.map((member, idx) => (
           <a
