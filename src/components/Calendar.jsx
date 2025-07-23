@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Beams from '../background/Beams';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faScrewdriverWrench, faObjectUngroup, faAtom } from '@fortawesome/free-solid-svg-icons';
-
+import ScrollFloat from "./scrollFloat/ScrollFloat";
 
 const events = [
   {
@@ -35,7 +35,16 @@ export default function Calendar() {
   return (
     <div className="my-8">
       
-      <h3 className="text-2xl font-semibold text-[#6EFFC4] mb-2">Calendar</h3>
+      <ScrollFloat
+  animationDuration={3}
+  ease='back.inOut(4)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=50%'
+  stagger={0.3}
+  className="text-3xl font-bold text-[#6EFFC4] mb-4"
+>
+  Calendar
+</ScrollFloat>
       <div className="max-w-xl mx-auto bg-[#0e0e10] border border-[#6EFFC4] rounded-xl p-4">
         {events.map((event, idx) => (
           <div
