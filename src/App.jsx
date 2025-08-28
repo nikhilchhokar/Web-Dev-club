@@ -1,5 +1,4 @@
-//here hyperspeed is backgorund
-
+// App.jsx
 import Navbar from './components/Navbar';
 import AboutUs from './components/AboutUs';
 import Events from './components/Events';
@@ -57,18 +56,48 @@ function App() {
       </div>
 
       <main className="bg-[#0b0b0c]/80 min-h-screen text-[#d0d0d0] relative z-10">
-        {/* Landing Section */}
-        <section className="flex flex-col items-center justify-center h-[100vh]">
+        
+        {/* 🔥 Home Page / Landing Section */}
+        <header className="flex flex-col items-center justify-center h-screen text-center px-4">
+          {/* Main Heading */}
           <h1
             style={{
               fontFamily: "'Space Grotesk', sans-serif",
               fontWeight: 700
             }}
-            className="text-7xl text-[#6EFFC4] mb-6 z-10 font-heading"
+            className="text-5xl sm:text-7xl md:text-9xl text-[#6EFFC4] mb-6 font-heading drop-shadow-lg"
           >
             The Web Dev Club
           </h1>
-        </section>
+
+          {/* Tagline below main heading */}
+          <p className="text-xl sm:text-2xl md:text-3xl text-white tracking-wide mb-10 font-light">
+            Code. Create. Collaborate.
+          </p>
+
+          {/* Cool Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 z-10">
+            <a
+              href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-[#6EFFC4] text-black font-semibold rounded-full shadow-[0_0_20px_rgba(110,255,196,0.6)] hover:bg-[#5ee1ad] transition-transform transform hover:scale-110"
+            >
+              🚀 Join Us
+            </a>
+
+            <a
+              href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-transparent border-2 border-[#6EFFC4] text-[#6EFFC4] font-semibold rounded-full hover:bg-[#6EFFC4]/10 shadow-[0_0_15px_rgba(110,255,196,0.4)] transition-transform transform hover:scale-110"
+            >
+              🎯 Apply for Interview
+            </a>
+          </div>
+        </header>
+
+        {/* Other Sections */}
         <section>
           <AboutUs className="h-[100vh]" />
           <Events />

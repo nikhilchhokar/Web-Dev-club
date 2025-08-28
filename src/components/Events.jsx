@@ -171,7 +171,7 @@ function Carousel({ slides }) {
 export default function Events() {
   return (
     <section id="events" className="py-16 px-4 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold text-[#6EFFC4] mb-4">Events</h2>
+      <h2 className="text-3xl font-bold text-[#6EFFC4] mb-4">Events/Workshop</h2>
       <Carousel slides={slides} />
     </section>
   );
