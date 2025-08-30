@@ -67,10 +67,11 @@ function App() {
           {/* Main Heading */}
           <h1
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontWeight: 700
+              fontFamily: "'Urbanist', sans-serif",
+              fontWeight: 900,
+              fontStyle:"Italic"
             }}
-            className="text-5xl sm:text-7xl md:text-9xl text-[#45D4FF] mb-6 font-heading drop-shadow-lg"
+            className="text-5xl sm:text-7xl md:text-9xl text-brand ext-[#45D4FF] mb-6  drop-shadow-lg"
           >
             The Web Dev Club
           </h1>
@@ -86,7 +87,7 @@ function App() {
               href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-[#45D4FF] text-black font-semibold rounded-full shadow-[0_0_20px_rgba(69,212,255,0.6)] hover:bg-[#1FBFFF] transition-transform transform hover:scale-110"
+              className="px-8 py-3 bg-brand text-black font-semibold rounded-full shadow-brand hover:shadow-brandStrong hover:bg-dark transition-transform transform hover:scale-110"
             >
               <FontAwesomeIcon className="text-[#00000]"icon={faRocket} /> Join Us
             </a>
@@ -95,7 +96,7 @@ function App() {
               href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-transparent border-2 border-[#45D4FF] text-[#45D4FF] font-semibold rounded-full hover:bg-[#45D4FF]/10 shadow-[0_0_15px_rgba(69,212,255,0.4)] transition-transform transform hover:scale-110"
+              className="px-8 py-3 bg-transparent border-2 border-brand text-brand font-semibold rounded-full hover:bg-brand/10 hover:shadow-brandStrong shadow-brand transition-transform transform hover:scale-110"
             >
               <FontAwesomeIcon icon={faUsers} /> Apply for Interview
             </a>

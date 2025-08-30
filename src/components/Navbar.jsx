@@ -34,9 +34,15 @@ export default function Navbar() {
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <span className="text-lg font-extrabold tracking-wide text-[#45D4FF] drop-shadow-sm">
-          The Web Dev Club
-        </span>
+        <span className="flex items-center gap-2 text-lg font-extrabold tracking-wide text-brand drop-shadow-sm">
+    <img
+      src="logo.png"   // <-- your society icon path
+      alt="a"
+      aria-hidden="true"
+      className="h-10 w-10 select-none pointer-events-none"
+    />
+     
+  </span>
       </div>
 
       {/* Mobile + Tablet dropdown menu with slide animation */}
@@ -51,7 +57,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={handleHomeClick}
-              className="text-base font-semibold text-white hover:text-[#45D4FF] transition-colors"
+              className="text-base font-semibold text-white hover:text-brand transition-colors"
             >
               {link.name}
             </a>
@@ -77,9 +83,15 @@ export default function Navbar() {
         onBlur={() => setExpanded(false)}
         tabIndex={0}
       >
-        <span className="text-2xl font-extrabold tracking-wide text-[#45D4FF] drop-shadow-sm whitespace-nowrap transition-all duration-[700ms]">
-          The Web Dev Club
-        </span>
+        <span className="flex [word-spacing:-0.4rem] tracking-normal items-center gap-3 text-2xl font-extrabold text-brand drop-shadow-sm whitespace-nowrap transition-all duration-[700ms]">
+    <img
+      src="logo.png"
+      alt=""
+      aria-hidden="true"
+      className="h-7 w-7 select-none pointer-events-none"
+    />
+    <l>The Web Dev Club</l>
+  </span>
       </div>
 
       {/* Expanded navbar links (desktop only) */}
@@ -132,21 +144,23 @@ export default function Navbar() {
       {/* Neon link hover effect */}
       <style>{`
         .nav-neon-text .nav-link-inner {
-          transition:
-            color 0.2s cubic-bezier(0.4,0.2,0.2,1),
-            text-shadow 0.3s cubic-bezier(0.4,0.2,0.2,1);
-          color: #fff;
-          text-shadow: none;
-        }
-        .nav-neon-text:hover .nav-link-inner,
-        .nav-neon-text:focus .nav-link-inner {
-          color: #45D4FF;
-          text-shadow:
-            0 0 6px #45D4FF,
-            0 0 14px #45D4FF,
-            0 0 24px #45D4FF66,
-            0 0 34px #45D4FFaa;
-        }
+  transition:
+    color 0.2s cubic-bezier(0.4,0.2,0.2,1),
+    text-shadow 0.3s cubic-bezier(0.4,0.2,0.2,1);
+  color: #fff; /* default text color */
+  text-shadow: none;
+}
+
+.nav-neon-text:hover .nav-link-inner,
+.nav-neon-text:focus .nav-link-inner {
+  color: #3DA0FF; /* your base brand color */
+  text-shadow:
+    0 0 6px #3DA0FF,
+    0 0 14px #3DA0FF,
+    0 0 24px #3DA0FF66, /* lighter transparency */
+    0 0 34px #3DA0FFaa; /* stronger transparency */
+}
+
       `}</style>
     </header>
   );

@@ -41,7 +41,7 @@ export default function Team() {
 
   return (
     <section className="my-8">
-      <h3 className="text-2xl font-semibold text-[#45D4FF] mb-2">Our Team</h3>
+      <h3 className="text-2xl font-semibold text-brand mb-2">Our Team</h3>
 
       <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6")}>
         {teamMembers.map((member, idx) => (
@@ -87,7 +87,7 @@ function Card({ className, children }) {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-[#45d4ff3d] group-hover:border-[#45d4ff3d] relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-brand-dark/10 group-hover:border-brand-dark/20 relative z-20",
         className
       )}
     >

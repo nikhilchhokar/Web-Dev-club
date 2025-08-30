@@ -34,19 +34,19 @@ export default function Calendar() {
 
   return (
     <div className="my-8">
-      <h3 className="text-2xl font-semibold text-[#45D4FF] mb-2">Calendar</h3>
+      <h3 className="text-2xl font-semibold text-brand mb-2">Calendar</h3>
 
-      <div className="max-w-xl mx-auto bg-[#0e0e10] border border-[#45D4FF] rounded-xl p-4">
+      <div className="max-w-xl mx-auto bg-[#0e0e10] border border-brand rounded-xl p-4">
         {events.map((event, idx) => (
           <div
             key={event.title}
-            className={`p-4 mb-4 border-l-4 border-[#45D4FF] cursor-pointer transition-colors duration-200 ${
+            className={`p-4 mb-4 border-l-4 border-brand cursor-pointer transition-colors duration-200 ${
               open[idx] ? 'bg-[#1a1a1d]' : ''
             }`}
             onClick={() => toggle(idx)}
           >
-            <FontAwesomeIcon icon={event.icon} style={{ color: '#45D4FF' }} />
-            <h4 className="text-lg font-bold text-[#45D4FF] m-0">{event.title}</h4>
+            <FontAwesomeIcon icon={event.icon} className="text-brand"/>
+            <h4 className="text-lg font-bold text-brand m-0">{event.title}</h4>
             <p className="m-0 text-[#d0d0d0]">{event.date}</p>
             {open[idx] && (
               <div className="pt-2 text-sm text-[#d0d0d0] whitespace-pre-line">
