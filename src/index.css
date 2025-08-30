@@ -7,14 +7,13 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #45D4FF #2D2D2D; /* thumb | track */
+  scrollbar-color: #3DA0FF #2D2D2D; /* thumb | track */
 }
 
 html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
   height: 13px;
@@ -23,26 +22,29 @@ html, body {
 
 *::-webkit-scrollbar-track {
   border-radius: 20px;
-  background-color: #2D2D2D;
+  background-color: #1A1A1A; /* darker track for contrast */
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #4A4E4E;
+  background-color: #2A2A2A; /* slightly lighter on hover */
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #323232;
+  background-color: #222222; /* pressed state */
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #45D4FF;           /* base neon blue */
+  background-color: #3DA0FF;           /* base brand blue */
+  box-shadow: 0 0 8px #3DA0FF;         /* subtle glow */
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #6FE0FF;           /* lighter hover (~+10-15% lightness) */
+  background-color: #6DB9FF;           /* lighter hover shade */
+  box-shadow: 0 0 12px #6DB9FF;        /* stronger glow */
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #1FBFFF;           /* slightly deeper active for contrast */
+  background-color: #1877E0;           /* darker active shade */
+  box-shadow: 0 0 10px #1877E0;        /* deeper glow */
 }
