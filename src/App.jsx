@@ -5,54 +5,59 @@ import Events from './components/Events';
 import Projects from './components/Projects';
 import Resources from './components/Resources';
 import Hyperspeed from './background/Hyperspeed';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket, faUsers } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function App() {
   return (
     <>
-      <Navbar />
-
+    <Navbar />
       {/* Hyperspeed as the full-page animated background */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
-        <Hyperspeed 
-          effectOptions={{
-            onSpeedUp: () => { },
-            onSlowDown: () => { },
-            distortion: 'mountainDistortion',
-            length: 400,
-            roadWidth: 14,
-            islandWidth: 5,
-            lanesPerRoad: 6,
-            fov: 110,
-            fovSpeedUp: 150,
-            speedUp: 2,
-            carLightsFade: 0.4,
-            totalSideLightSticks: 50,
-            lightPairsPerRoadWay: 50,
-            shoulderLinesWidthPercentage: 0.05,
-            brokenLinesWidthPercentage: 0.1,
-            brokenLinesLengthPercentage: 0.5,
-            lightStickWidth: [0.12, 0.5],
-            lightStickHeight: [1.3, 1.7],
-            movingAwaySpeed: [60, 80],
-            movingCloserSpeed: [-120, -160],
-            carLightsLength: [400 * 0.05, 400 * 0.15],
-            carLightsRadius: [0.05, 0.14],
-            carWidthPercentage: [0.3, 0.5],
-            carShiftX: [-0.2, 0.2],
-            carFloorSeparation: [0.05, 1],
-            colors: {
-              roadColor: 0x050505,
-              islandColor: 0x0b0f0d,
-              background: 0x000000,
-              shoulderLines: 0x6effc4,
-              brokenLines: 0x6effc4,
-              leftCars: [0x6effc4, 0x47ffaa, 0x25ff99],
-              rightCars: [0x6efff4, 0x47e5ff, 0x25caff],
-              sticks: 0x6effc4
-            }
-          }}
-        />
+        <Hyperspeed
+  effectOptions={{
+    onSpeedUp: () => {},
+    onSlowDown: () => {},
+    distortion: 'mountainDistortion',
+    length: 400,
+    roadWidth: 14,
+    islandWidth: 5,
+    lanesPerRoad: 6,
+    fov: 110,
+    fovSpeedUp: 150,
+    speedUp: 2,
+    carLightsFade: 0.4,
+    totalSideLightSticks: 50,
+    lightPairsPerRoadWay: 50,
+    shoulderLinesWidthPercentage: 0.05,
+    brokenLinesWidthPercentage: 0.1,
+    brokenLinesLengthPercentage: 0.5,
+    lightStickWidth: [0.12, 0.5],
+    lightStickHeight: [1.3, 1.7],
+    movingAwaySpeed: [60, 80],
+    movingCloserSpeed: [-120, -160],
+    carLightsLength: [400 * 0.05, 400 * 0.15],
+    carLightsRadius: [0.05, 0.14],
+    carWidthPercentage: [0.3, 0.5],
+    carShiftX: [-0.2, 0.2],
+    carFloorSeparation: [0.05, 1],
+    colors: {
+      roadColor: 0x050505,
+      islandColor: 0x0b0f0d,
+      background: 0x000000,
+
+      // accents changed to #45D4FF
+      shoulderLines: 0x45d4ff,
+      brokenLines: 0x45d4ff,
+
+      // left/right car light palettes aligned to the new brand blue
+      leftCars: [0x45d4ff, 0x1fbfff, 0x6fe0ff],   // neon blue range
+      rightCars: [0x6fe0ff, 0x47e5ff, 0x25caff],  // keep sky-leaning blues
+      sticks: 0x45d4ff
+    }
+  }}
+/>
       </div>
 
       <main className="bg-[#0b0b0c]/80 min-h-screen text-[#d0d0d0] relative z-10">
@@ -65,7 +70,7 @@ function App() {
               fontFamily: "'Space Grotesk', sans-serif",
               fontWeight: 700
             }}
-            className="text-5xl sm:text-7xl md:text-9xl text-[#6EFFC4] mb-6 font-heading drop-shadow-lg"
+            className="text-5xl sm:text-7xl md:text-9xl text-[#45D4FF] mb-6 font-heading drop-shadow-lg"
           >
             The Web Dev Club
           </h1>
@@ -81,18 +86,18 @@ function App() {
               href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-[#6EFFC4] text-black font-semibold rounded-full shadow-[0_0_20px_rgba(110,255,196,0.6)] hover:bg-[#5ee1ad] transition-transform transform hover:scale-110"
+              className="px-8 py-3 bg-[#45D4FF] text-black font-semibold rounded-full shadow-[0_0_20px_rgba(69,212,255,0.6)] hover:bg-[#1FBFFF] transition-transform transform hover:scale-110"
             >
-              🚀 Join Us
+              <FontAwesomeIcon className="text-[#00000]"icon={faRocket} /> Join Us
             </a>
 
             <a
               href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-transparent border-2 border-[#6EFFC4] text-[#6EFFC4] font-semibold rounded-full hover:bg-[#6EFFC4]/10 shadow-[0_0_15px_rgba(110,255,196,0.4)] transition-transform transform hover:scale-110"
+              className="px-8 py-3 bg-transparent border-2 border-[#45D4FF] text-[#45D4FF] font-semibold rounded-full hover:bg-[#45D4FF]/10 shadow-[0_0_15px_rgba(69,212,255,0.4)] transition-transform transform hover:scale-110"
             >
-              🎯 Apply for Interview
+              <FontAwesomeIcon icon={faUsers} /> Apply for Interview
             </a>
           </div>
         </header>

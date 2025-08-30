@@ -34,7 +34,7 @@ export default function Navbar() {
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <span className="text-lg font-extrabold tracking-wide text-[#6EFFC4] drop-shadow-sm">
+        <span className="text-lg font-extrabold tracking-wide text-[#45D4FF] drop-shadow-sm">
           The Web Dev Club
         </span>
       </div>
@@ -51,7 +51,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={handleHomeClick}
-              className="text-base font-semibold text-white hover:text-[#6EFFC4] transition-colors"
+              className="text-base font-semibold text-white hover:text-[#45D4FF] transition-colors"
             >
               {link.name}
             </a>
@@ -62,9 +62,11 @@ export default function Navbar() {
       {/* --- Desktop Fancy Navbar (lg+) --- */}
       <div
         className={`hidden lg:flex transition-all duration-[700ms] ease-in-out pointer-events-auto select-none shadow-lg border-b border-white/20 mt-4 rounded-2xl items-center justify-center
-          ${expanded
-            ? "bg-[#18181b]/60 px-8 py-2 scale-90 z-20 backdrop-blur-sm"
-            : "bg-[#18181b]/90 px-12 py-4 scale-100 z-30 backdrop-blur-md"}`}
+          ${
+            expanded
+              ? "bg-[#18181b]/60 px-8 py-2 scale-90 z-20 backdrop-blur-sm"
+              : "bg-[#18181b]/90 px-12 py-4 scale-100 z-30 backdrop-blur-md"
+          }`}
         style={{
           boxShadow: "0 4px 24px 0 rgba(0,0,0,0.10)",
           minWidth: "180px",
@@ -75,7 +77,7 @@ export default function Navbar() {
         onBlur={() => setExpanded(false)}
         tabIndex={0}
       >
-        <span className="text-2xl font-extrabold tracking-wide text-[#6EFFC4] drop-shadow-sm whitespace-nowrap transition-all duration-[700ms]">
+        <span className="text-2xl font-extrabold tracking-wide text-[#45D4FF] drop-shadow-sm whitespace-nowrap transition-all duration-[700ms]">
           The Web Dev Club
         </span>
       </div>
@@ -83,9 +85,11 @@ export default function Navbar() {
       {/* Expanded navbar links (desktop only) */}
       <div
         className={`hidden lg:block absolute left-1/2 -translate-x-1/2 transition-all duration-[700ms] ease-in-out pointer-events-auto
-          ${expanded
-            ? "opacity-100 scale-100 translate-y-2 z-10"
-            : "opacity-0 scale-95 -translate-y-2 pointer-events-none z-0"}`}
+          ${
+            expanded
+              ? "opacity-100 scale-100 translate-y-2 z-10"
+              : "opacity-0 scale-95 -translate-y-2 pointer-events-none z-0"
+          }`}
         style={{
           top: "68px",
           width: "100%",
@@ -136,12 +140,12 @@ export default function Navbar() {
         }
         .nav-neon-text:hover .nav-link-inner,
         .nav-neon-text:focus .nav-link-inner {
-          color: #6EFFC4;
+          color: #45D4FF;
           text-shadow:
-            0 0 6px #6EFFC4,
-            0 0 14px #6EFFC4,
-            0 0 24px #6EFFC466,
-            0 0 34px #33ffc1aa;
+            0 0 6px #45D4FF,
+            0 0 14px #45D4FF,
+            0 0 24px #45D4FF66,
+            0 0 34px #45D4FFaa;
         }
       `}</style>
     </header>

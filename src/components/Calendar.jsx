@@ -3,24 +3,24 @@ import Beams from '../background/Beams';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faScrewdriverWrench, faObjectUngroup, faAtom } from '@fortawesome/free-solid-svg-icons';
 
-
 const events = [
   {
-    icon : faScrewdriverWrench,
+    icon: faScrewdriverWrench,
     title: ' Git & GitHub Workshop',
-    date: 'Sunday, August 11 – 3:00 PM',
-    details: 'Learn version control + GitHub basics\n🧠 Speaker: Nikhil Chhokar\n📍 Room 204 / Google Meet',
+    date: 'Sunday, August 11 - 3:00 PM',
+    details:
+      'Learn version control + GitHub basics\n🧠 Speaker: Nikhil Chhokar\n📍 Room 204 / Google Meet',
   },
   {
-    icon : faObjectUngroup,
+    icon: faObjectUngroup,
     title: ' Web Design Mini Jam',
-    date: 'Sunday, August 18 – 4:00 PM',
+    date: 'Sunday, August 18 - 4:00 PM',
     details: 'Team up to build cool UIs\n🧑‍💻 Tools: Figma + Tailwind\n🎁 Swags for winners',
   },
   {
-    icon : faAtom,
+    icon: faAtom,
     title: ' Intro to React.js',
-    date: 'Sunday, August 25 – 2:30 PM',
+    date: 'Sunday, August 25 - 2:30 PM',
     details: 'Build your first React app step-by-step\n🎤 Speaker: Riya Arora\n📍 Computer Lab 1',
   },
 ];
@@ -28,30 +28,51 @@ const events = [
 export default function Calendar() {
   const [open, setOpen] = useState(Array(events.length).fill(false));
 
-  const toggle = idx => {
-    setOpen(open => open.map((v, i) => (i === idx ? !v : v)));
+  const toggle = (idx) => {
+    setOpen((open) => open.map((v, i) => (i === idx ? !v : v)));
   };
 
   return (
     <div className="my-8">
-      
-      <h3 className="text-2xl font-semibold text-[#6EFFC4] mb-2">Calendar</h3>
-      <div className="max-w-xl mx-auto bg-[#0e0e10] border border-[#6EFFC4] rounded-xl p-4">
+      <h3 className="text-2xl font-semibold text-[#45D4FF] mb-2">Calendar</h3>
+
+      <div className="max-w-xl mx-auto bg-[#0e0e10] border border-[#45D4FF] rounded-xl p-4">
         {events.map((event, idx) => (
           <div
             key={event.title}
-            className={`p-4 mb-4 border-l-4 border-[#6EFFC4] cursor-pointer transition-colors duration-200 ${open[idx] ? 'bg-[#1a1a1d]' : ''}`}
+            className={`p-4 mb-4 border-l-4 border-[#45D4FF] cursor-pointer transition-colors duration-200 ${
+              open[idx] ? 'bg-[#1a1a1d]' : ''
+            }`}
             onClick={() => toggle(idx)}
           >
-            <FontAwesomeIcon icon={event.icon} style={{ color: '#6EFFC4'}}/>
-            <h4 className="text-lg font-bold text-[#6EFFC4] m-0">{event.title}</h4>
+            <FontAwesomeIcon icon={event.icon} style={{ color: '#45D4FF' }} />
+            <h4 className="text-lg font-bold text-[#45D4FF] m-0">{event.title}</h4>
             <p className="m-0 text-[#d0d0d0]">{event.date}</p>
             {open[idx] && (
-              <div className="pt-2 text-sm text-[#d0d0d0] whitespace-pre-line">{event.details}</div>
+              <div className="pt-2 text-sm text-[#d0d0d0] whitespace-pre-line">
+                {event.details}
+              </div>
             )}
           </div>
         ))}
       </div>
+
+      {/* Optional: neon glow on hover for titles/icons */}
+      <style>{`
+        .neon-blue { 
+          color: #45D4FF;
+          text-shadow:
+            0 0 6px #45D4FF,
+            0 0 14px #45D4FF,
+            0 0 24px #45D4FF66,
+            0 0 34px #45D4FFaa;
+        }
+        .event-block:hover h4,
+        .event-block:hover svg {
+          color: #45D4FF !important;
+          filter: drop-shadow(0 0 6px #45D4FF) drop-shadow(0 0 14px #45D4FF);
+        }
+      `}</style>
     </div>
   );
-} 
+}

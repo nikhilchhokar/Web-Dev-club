@@ -41,7 +41,8 @@ export default function Team() {
 
   return (
     <section className="my-8">
-      <h3 className="text-2xl font-semibold text-[#6EFFC4] mb-2">Our Team</h3>
+      <h3 className="text-2xl font-semibold text-[#45D4FF] mb-2">Our Team</h3>
+
       <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6")}>
         {teamMembers.map((member, idx) => (
           <a
@@ -56,7 +57,7 @@ export default function Team() {
             <AnimatePresence>
               {hoveredIndex === idx && (
                 <motion.span
-                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-[#6effc53d] block rounded-3xl"
+                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-[#45d4ff3d] block rounded-3xl"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -70,6 +71,7 @@ export default function Team() {
                 />
               )}
             </AnimatePresence>
+
             <Card>
               <CardTitle>{member.title}</CardTitle>
               <CardDescription>{member.description}</CardDescription>
@@ -85,7 +87,7 @@ function Card({ className, children }) {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-[#6effc53d] group-hover:border-[#6effc53d] relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-[#45d4ff3d] group-hover:border-[#45d4ff3d] relative z-20",
         className
       )}
     >
@@ -106,12 +108,7 @@ function CardTitle({ className, children }) {
 
 function CardDescription({ className, children }) {
   return (
-    <p
-      className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
-        className
-      )}
-    >
+    <p className={cn("mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
       {children}
     </p>
   );
