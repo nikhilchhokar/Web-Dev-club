@@ -8,6 +8,7 @@ import Hyperspeed from './background/Hyperspeed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket, faUsers } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
+import Typewriter from 'typewriter-effect';
 
 function App() {
   return (
@@ -77,10 +78,18 @@ function App() {
           </h1>
 
           {/* Tagline below main heading */}
+            
           <p className="text-xl sm:text-2xl md:text-3xl text-white tracking-wide mb-10 font-light">
-            Code. Create. Collaborate.
+            <Typewriter
+  options={{
+    strings: ['Code. Create. Collaborate.'],
+    autoStart: true,
+    deleteSpeed: Infinity,
+    loop: 0,
+        
+  } } 
+/>
           </p>
-
           {/* Cool Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 z-10">
             <a
