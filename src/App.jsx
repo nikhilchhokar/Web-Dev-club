@@ -20,7 +20,7 @@ function App() {
   effectOptions={{
     onSpeedUp: () => {},
     onSlowDown: () => {},
-    distortion: 'mountainDistortion',
+    distortion: "mountainDistortion",
     length: 400,
     roadWidth: 14,
     islandWidth: 5,
@@ -48,17 +48,21 @@ function App() {
       islandColor: 0x0b0f0d,
       background: 0x000000,
 
-      // accents changed to #45D4FF
-      shoulderLines: 0x45d4ff,
-      brokenLines: 0x45d4ff,
+      // accents → brand palette
+      shoulderLines: 0x3da0ff, 
+      brokenLines: 0x3da0ff,
 
-      // left/right car light palettes aligned to the new brand blue
-      leftCars: [0x45d4ff, 0x1fbfff, 0x6fe0ff],   // neon blue range
-      rightCars: [0x6fe0ff, 0x47e5ff, 0x25caff],  // keep sky-leaning blues
-      sticks: 0x45d4ff
+      // car light gradients
+      leftCars: [0x6db9ff, 0x3da0ff, 0xa5d4ff],  // light → base → glow
+      rightCars: [0x1877e0, 0x3da0ff, 0x6db9ff], // dark → base → light
+
+      // sticks gradient (base → glow)
+      sticks: [0x3da0ff, 0xa5d4ff]
     }
   }}
 />
+
+
       </div>
 
       <main className="bg-[#0b0b0c]/80 min-h-screen text-[#d0d0d0] relative z-10">
