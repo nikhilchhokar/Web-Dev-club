@@ -8,39 +8,40 @@ const teamMembers = [
     title: "Nikhil Chhokar",
     description: "President",
     link: "https://www.linkedin.com/in/nikhil-chhokar-321922226/",
-    image: "src/components/gallery/nikhil.jpeg"
+    image: "/images/team/nikhil.jpeg"
   },
   {
     title: "Medhavee Singh",
     description: "Vice President",
     link: "https://www.linkedin.com/in/medhavee-singh-408424317",
-    image: "src/components/gallery/medhave.jpg"
+    image: "/images/team/medhave.jpg"
   },
   {
     title: "Abhinav Chowdhary",
     description: "Technical Lead",
     link: "https://www.linkedin.com/in/abhinav-chowdhary-277b1a275/",
-    image: "src/components/gallery/abhinav.jpg"
+    image: "/images/team/abhinav.jpg"
   },
   {
     title: "Devesh Rawat",
     description: "Operations Head",
     link: "https://www.linkedin.com/in/devesh-rawat-240836323/",
-    image: "src/components/gallery/devesh.jpg"
+    image: "/images/team/devesh.jpg"
   },
   {
     title: "Ananya Chawla",
     description: "General Secretary",
     link: "https://www.linkedin.com/in/ananyachawla4605/",
-    image: "src/components/gallery/ananya.jpeg"
+    image: "/images/team/ananya.jpeg"
   },
   {
     title: "Gurtej Bamrah",
     description: "Social Media Head",
     link: "https://www.linkedin.com/in/gurtej-bamrah-a1757331a/",
-    image: "src/components/gallery/gurtej.jpg"
+    image: "/images/team/gurtej.jpg"
   }
 ];
+
 
 export default function Team() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
