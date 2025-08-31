@@ -1,5 +1,5 @@
 import { FaDiscord, FaTwitter, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { FaWpforms } from "react-icons/fa";
+import { FaWpforms, FaInstagram } from "react-icons/fa";
 
 const JOIN_LINKS = [
    {
@@ -7,6 +7,12 @@ const JOIN_LINKS = [
     href: "https://docs.google.com/forms/d/e/1FAIpQLSftwSB5AKVGxER4FycYr9GzfZCkEb1rsXbL_6MvQlGs5MUc9A/viewform?usp=preview",
     color: "bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800",
     icon: <FaWpforms className="w-6 h-6" />
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/the_webdev_club_gtbit?igsh=MWplb3ZpbTN4bGNzOQ==", // Replace with your actual Instagram link
+    color: "bg-pink-500",
+    icon: <FaInstagram className="w-6 h-6" />
   },
   {
     name: "WhatsApp",
