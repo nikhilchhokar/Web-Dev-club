@@ -5,34 +5,40 @@ import { cn } from "../lib/utils";
 // Example team data
 const teamMembers = [
   {
-    title: "Alice",
-    description: "Frontend Developer",
-    link: "https://linkedin.com/in/alice"
+    title: "Nikhil Chhokar",
+    description: "President",
+    link: "https://www.linkedin.com/in/nikhil-chhokar-321922226/",
+    image: "src/components/gallery/nikhil.jpeg"
   },
   {
-    title: "Bob",
-    description: "Backend Developer",
-    link: "https://linkedin.com/in/bob"
+    title: "Medhavee Singh",
+    description: "Vice President",
+    link: "https://www.linkedin.com/in/medhavee-singh-408424317",
+    image: "src/components/gallery/medhave.jpg"
   },
   {
-    title: "Charlie",
-    description: "UI/UX Designer",
-    link: "https://linkedin.com/in/charlie"
+    title: "Abhinav Chowdhary",
+    description: "Technical Lead",
+    link: "https://www.linkedin.com/in/abhinav-chowdhary-277b1a275/",
+    image: "src/components/gallery/abhinav.jpg"
   },
   {
-    title: "Alice",
-    description: "Frontend Developer",
-    link: "https://linkedin.com/in/alice"
+    title: "Devesh Rawat",
+    description: "Curriculum Head",
+    link: "https://www.linkedin.com/in/devesh-rawat-240836323/",
+    image: "src/components/gallery/devesh.jpg"
   },
   {
-    title: "Bob",
-    description: "Backend Developer",
-    link: "https://linkedin.com/in/bob"
+    title: "Ananya Chawla",
+    description: "General Secretary",
+    link: "https://www.linkedin.com/in/ananyachawla4605/",
+    image: "src/components/gallery/ananya.jpeg"
   },
   {
-    title: "Charlie",
-    description: "UI/UX Designer",
-    link: "https://linkedin.com/in/charlie"
+    title: "Gurtej Bamrah",
+    description: "Social Media Head",
+    link: "https://www.linkedin.com/in/gurtej-bamrah-a1757331a/",
+    image: "src/components/gallery/gurtej.jpg"
   }
 ];
 
@@ -73,6 +79,14 @@ export default function Team() {
             </AnimatePresence>
 
             <Card>
+              {member.image && (
+                <img
+                  src={member.image}
+                  alt={member.title}
+                  className="w-20 h-20 object-cover rounded-full mx-auto mb-4 border-2 border-brand"
+                  loading="lazy"
+                />
+              )}
               <CardTitle>{member.title}</CardTitle>
               <CardDescription>{member.description}</CardDescription>
             </Card>

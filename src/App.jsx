@@ -83,16 +83,16 @@ function App() {
 
           {/* Tagline below main heading */}
             
-          <p className="text-xl sm:text-2xl md:text-3xl text-white tracking-wide mb-10 font-light">
+          <p className="text-2xl sm:text-3xl md:text-4xl text-white tracking-wide mb-10 font-light">
             <Typewriter
-  options={{
-    strings: ['Code. Create. Collaborate.'],
-    autoStart: true,
-    deleteSpeed: Infinity,
-    loop: 0,
-        
-  } } 
-/>
+              options={{
+                strings: ['Code.', 'Create.', 'Collaborate.'],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+                delay: 75,
+              }}
+            />
           </p>
           {/* Cool Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 z-10">

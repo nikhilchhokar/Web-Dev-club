@@ -3,8 +3,8 @@ import Image from "./tba.jpg"
 // Minimal SlideData for demo
 const slides = [
   {
-    title: "Coming Soon",
-    button: "Learn More",
+    title: "Workshop",
+    button: "8th september",
      src : Image// random Unsplash photo
   },
   {
