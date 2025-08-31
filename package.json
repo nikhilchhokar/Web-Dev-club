@@ -2,10 +2,14 @@
   "name": "the-web-dev-club",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nikhilchhokar.github.io/Web-Dev-club/",
+
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
