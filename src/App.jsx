@@ -4,6 +4,8 @@ import AboutUs from './components/AboutUs';
 import Events from './components/Events';
 import Projects from './components/Projects';
 import Resources from './components/Resources';
+import Calendar from './components/Calendar';
+import JoinUs from './components/JoinUs';
 import Hyperspeed from './background/Hyperspeed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -68,7 +70,7 @@ function App() {
       <main className="bg-[#0b0b0c]/80 min-h-screen text-[#d0d0d0] relative z-10">
         
         {/* 🔥 Home Page / Landing Section */}
-        <header className="flex flex-col items-center justify-center h-screen text-center px-4">
+  <header id="home" className="flex flex-col items-center justify-center h-screen text-center px-4">
           {/* Main Heading */}
           <h1
             style={{
@@ -97,7 +99,7 @@ function App() {
           {/* Cool Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 z-10">
             <a
-              href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
+              href="https://chat.whatsapp.com/IVLOiJQKhN58mQv4D9AADX?mode=ems_copy_c" // 🔗 Replace with actual Google Form link
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-brand text-black font-semibold rounded-full shadow-brand hover:shadow-brandStrong hover:bg-dark transition-transform transform hover:scale-110"
@@ -106,7 +108,7 @@ function App() {
             </a>
 
             <a
-              href="https://forms.gle/your-google-form-link" // 🔗 Replace with actual Google Form link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSftwSB5AKVGxER4FycYr9GzfZCkEb1rsXbL_6MvQlGs5MUc9A/viewform?usp=preview" // 🔗 Replace with actual Google Form link
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-transparent border-2 border-brand text-brand font-semibold rounded-full hover:bg-brand/10 hover:shadow-brandStrong shadow-brand transition-transform transform hover:scale-110"
@@ -116,11 +118,12 @@ function App() {
           </div>
         </header>
 
-        {/* Other Sections */}
+        {/* Other Sections in new order */}
         <section>
           <AboutUs className="h-[100vh]" />
-          <Events />
+          <Calendar />
           <Projects />
+          <Events />
           <Resources />
         </section>
       </main>

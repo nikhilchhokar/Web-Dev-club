@@ -24,7 +24,7 @@ const teamMembers = [
   },
   {
     title: "Devesh Rawat",
-    description: "Curriculum Head",
+    description: "Operations Head",
     link: "https://www.linkedin.com/in/devesh-rawat-240836323/",
     image: "src/components/gallery/devesh.jpg"
   },

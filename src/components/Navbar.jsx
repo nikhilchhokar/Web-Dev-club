@@ -4,10 +4,11 @@ import { Menu, X } from "lucide-react"; // hamburger & close icons
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Events", href: "#events" },
+  { name: "Calendar", href: "#calendar" },
   { name: "Projects", href: "#projects" },
-  { name: "Resources", href: "#resources" },
-  { name: "JoinUs", href: "#join" },
+  { name: "Events", href: "#events" },
+  { name: "Teams", href: "#resources" },
+  { name: "JoinUs", href: "#joinus" },
 ];
 
 export default function Navbar() {
@@ -16,7 +17,7 @@ export default function Navbar() {
 
   // Smooth scroll Home
   const handleHomeClick = (e) => {
-    if (e.target.getAttribute("href") === "#home") {
+    if (e.currentTarget.getAttribute("href") === "#home") {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
       setExpanded(false);
