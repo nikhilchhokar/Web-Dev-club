@@ -2,7 +2,7 @@
   "name": "the-web-dev-club",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nikhilchhokar.github.io/Web-Dev-club/",
+  "homepage": "https://webdevclubgtbit.xyz/",
 
   "scripts": {
     "dev": "vite --host",
